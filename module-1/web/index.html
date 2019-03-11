@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  All of the displayed are provided as JSON objects directly within
+  the JavaScript at the end of this file.
+-->
+<head>
+    <title>Cloudy With Chance of Crt</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+</head>
+<body ng-app="cloudApp">
+<style>
+    @media (max-width: 800px) {
+        img {
+            max-width: 300px;
+        }
+    }
+</style>
+<br>
+<div style="text-align: center">
+    <img src="https://s3.amazonaws.com/dbrocloudy/cover.png" width="600px" align="center">
+    <h1>Cloudy With Chance of CRT</h1>
+</div>
+<br>
+<div class="container">
+    <div id="cloudGrid" class="row" ng-controller="cloudListController">
+        <div class="col-md-4 border border-warning" ng-repeat="member in members">
+            <br>
+            <p align="center">
+                <strong> {{member.name}}</strong>
+                <br>
+                <img src="{{member.thumbImageUri}}" alt="{{member.Name}}" width="250px">
+            </p>
+            <p>
+                <b>Speciality:</b> {{member.speciality}}
+                <br>
+                <b>Quote:</b> {{member.quote}}
+                <br>
+                <b>AWS Certified:</b> {{member.awsCertified}}
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+
+var app = angular.module('cloudApp', []);
+
+app.controller('cloudListController', function ($scope) {
+
+    $scope.members =
+        [
+            {
+                "id": "1",
+                "name": "DBro",
+                "speciality": "Alexa, pretending to know cloud",
+                "quote": "Have you tried turning the cloud off and on again?",
+                "awsCertified": "bool: True",
+                "thumbImageUri": "https://s3.amazonaws.com/dbrocloudy/dbroPic.png"
+            },
+            {
+                "id": "2",
+                "name": "",
+                "speciality": "",
+                "quote": "",
+                "AWS Certified": "Incoming",
+                "thumbImageUri": "https://s3.amazonaws.com/dbrocloudy/duck.jpg"
+            },
+            {
+                "id": "3",
+                "name": "",
+                "speciality": "",
+                "quote": "",
+                "AWS Certified": "Incoming",
+                "thumbImageUri": "https://s3.amazonaws.com/dbrocloudy/duck.jpg"
+            },
+            {
+                "id": "4",
+                "name": "",
+                "speciality": "",
+                "quote": "",
+                "AWS Certified": "Incoming",
+                "thumbImageUri": "https://s3.amazonaws.com/dbrocloudy/duck.jpg"
+            },
+            {
+                "id": "5",
+                "name": "",
+                "speciality": "",
+                "quote": "",
+                "AWS Certified": "Incoming",
+                "thumbImageUri": "https://s3.amazonaws.com/dbrocloudy/duck.jpg"
+            },
+            {
+                "id": "6",
+                "name": "",
+                "speciality": "",
+                "quote": "",
+                "AWS Certified": "Incoming",
+                "thumbImageUri": "https://s3.amazonaws.com/dbrocloudy/duck.jpg"
+            },
+            {
+                "id": "7",
+                "name": "",
+                "speciality": "",
+                "quote": "",
+                "AWS Certified": "Incoming",
+                "thumbImageUri": "https://s3.amazonaws.com/dbrocloudy/duck.jpg"
+            },
+            {
+                "id": "8",
+                "name": "",
+                "speciality": "",
+                "quote": "",
+                "AWS Certified": "Incoming",
+                "thumbImageUri": "https://s3.amazonaws.com/dbrocloudy/duck.jpg"
+            },
+            {
+                "id": "9",
+                "name": "",
+                "speciality": "",
+                "quote": "",
+                "AWS Certified": "Incoming",
+                "thumbImageUri": "https://s3.amazonaws.com/dbrocloudy/duck.jpg"
+            },
+        ]
+    });
+</script>
+</html>
